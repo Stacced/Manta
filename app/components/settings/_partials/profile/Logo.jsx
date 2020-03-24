@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // DragNDrop
 import HTML5Backend, { NativeTypes } from 'react-dnd-html5-backend';
-import { DragDropContext } from 'react-dnd';
+import { DndProvider } from 'react-dnd';
 
 // Helpers
 import { processImg } from '../../../../helpers/image';
@@ -80,7 +80,7 @@ const SelectLogoBtn = styled.a`
   }
 `;
 
-class Logo extends Component {
+export default class Logo extends Component {
   constructor(props) {
     super(props);
     this.selectLogo = this.selectLogo.bind(this);
@@ -127,6 +127,7 @@ class Logo extends Component {
   render() {
     const { FILE } = NativeTypes;
     return (
+        <DndProvider backend={HTML5Backend}>
       <LogoContainer>
         {this.props.logo ? (
           <LogoDisplayzone>
@@ -148,6 +149,7 @@ class Logo extends Component {
           </LogoDropzone>
         )}
       </LogoContainer>
+        </DndProvider>
     );
   }
 }
@@ -160,5 +162,3 @@ Logo.propTypes = {
 Logo.defaultProps = {
   logo: null,
 };
-
-export default DragDropContext(HTML5Backend)(Logo);
