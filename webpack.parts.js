@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const BabelWebpackPlugin = require('babel-minify-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 
@@ -26,8 +26,8 @@ exports.checkDuplicate = options => ({
 });
 
 // Clean between builds
-exports.clean = path => ({
-  plugins: [new CleanWebpackPlugin([path])],
+exports.clean = () => ({
+  plugins: [new CleanWebpackPlugin()],
 });
 
 // JS Minification

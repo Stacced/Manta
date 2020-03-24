@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const parts = require('./webpack.parts');
 const nodeExternals = require('webpack-node-externals');
+const parts = require('./webpack.parts');
 const PATHS = {
   prod: path.resolve(__dirname, 'prod'),
 };
