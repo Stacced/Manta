@@ -1,8 +1,6 @@
-const electron = require('electron');
-
-const centerOnPrimaryDisplay = (winWidth, winHeight) => {
+const centerOnPrimaryDisplay = (screen, winWidth, winHeight) => {
   // Get primary display (screen / monitor) bounds
-  const primaryDisplay = electron.screen.getPrimaryDisplay();
+  const primaryDisplay = screen.getPrimaryDisplay();
   const { x, y, width, height } = primaryDisplay.bounds;
 
   // Calculate X and Y coordinates to make rectangular center on primary display

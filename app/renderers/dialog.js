@@ -3,7 +3,7 @@ const path = require('path');
 const url = require('url');
 
 // Electron Libs
-const { BrowserWindow } = require('electron').remote;
+const { BrowserWindow, screen } = require('electron').remote;
 
 // Custom Libs
 const sounds = require('../../libs/sounds.js');
@@ -15,7 +15,7 @@ function showModalWindow(dialogOptions, returnChannel = '', ...rest) {
   const height = 220;
 
   // Get X and Y coordinations on primary display
-  const winPOS = centerOnPrimaryDisplay(width, height);
+  const winPOS = centerOnPrimaryDisplay(screen, width, height);
 
   let modalWin = new BrowserWindow({
     x: winPOS.x,
@@ -25,6 +25,9 @@ function showModalWindow(dialogOptions, returnChannel = '', ...rest) {
     backgroundColor: '#282828',
     frame: false,
     show: false,
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
   modalWin.loadURL(
     url.format({

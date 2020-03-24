@@ -10,7 +10,7 @@ const isDev = require('electron-is-dev');
 const omit = require('lodash').omit;
 
 // Electron Libs
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, screen } = require('electron');
 const { autoUpdater } = require('electron-updater');
 
 // Place a BrowserWindow in center of primary display
@@ -35,7 +35,7 @@ function createTourWindow() {
   const height = 600;
 
   // Get X and Y coordinations on primary display
-  const winPOS = centerOnPrimaryDisplay(width, height);
+  const winPOS = centerOnPrimaryDisplay(screen, width, height);
 
   // Creating a New Window
   tourWindow = new BrowserWindow({
@@ -49,6 +49,9 @@ function createTourWindow() {
     movable: false,
     title: 'Tour Window',
     backgroundColor: '#F9FAFA',
+    webPreferences:{
+      nodeIntegration: true
+    }
   });
   // Register WindowID with appConfig
   appConfig.set('tourWindowID', parseInt(tourWindow.id));
@@ -85,6 +88,9 @@ function createMainWindow() {
     backgroundColor: '#2e2c29',
     show: false,
     title: 'Main Window',
+    webPreferences:{
+      nodeIntegration: true
+    }
   });
   // Register WindowID
   appConfig.set('mainWindowID', parseInt(mainWindow.id));
@@ -127,6 +133,9 @@ function createPreviewWindow() {
     backgroundColor: '#2e2c29',
     show: false,
     title: 'Preview Window',
+    webPreferences:{
+      nodeIntegration: true
+    }
   });
   // Register WindowID
   appConfig.set('previewWindowID', parseInt(previewWindow.id));
