@@ -5,7 +5,7 @@ import { compose } from 'recompose';
 import { connect } from 'react-redux';
 const openDialog = require('../renderers/dialog.js');
 const ipc = require('electron').ipcRenderer;
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 // Actions
 import * as ContactsActions from '../actions/contacts';
@@ -124,6 +124,6 @@ const mapStateToProps = state => ({
 
 export default compose(
   connect(mapStateToProps),
-  translate(),
+  withTranslation(),
   _withFadeInAnimation
 )(Contacts);

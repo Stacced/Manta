@@ -3,8 +3,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
+import { withTranslation } from 'react-i18next';
 import { getCurrentInvoice } from '../reducers/FormReducer';
-import { translate } from 'react-i18next';
 
 // Actions
 import * as FormActions from '../actions/form';
@@ -184,6 +184,6 @@ const mapDispatchToProps = dispatch => ({
 // Export
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
-  translate(),
+  withTranslation(),
   _withFadeInAnimation
 )(Form);

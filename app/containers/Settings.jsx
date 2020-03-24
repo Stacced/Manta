@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { isEqual } from 'lodash';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 // Selectors
 import {
@@ -147,6 +147,6 @@ const mapStateToProps = state => ({
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
-  translate(),
+  withTranslation(),
   _withFadeInAnimation
 )(Settings);
