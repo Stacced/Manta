@@ -64,6 +64,7 @@
       "reverse": "Autoliquidation"
     },
     "note": "Remarque",
-    "currency": "Devise"
+    "currency": "Devise",
+    "invoiceID": "N° de facture"
   }
 }

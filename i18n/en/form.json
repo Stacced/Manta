@@ -64,6 +64,7 @@
       "reverse": "Reverse Charge"
     },
     "note": "Note",
-    "currency": "Currency"
+    "currency": "Currency",
+    "invoiceID": "Invoice ID"
   }
 }

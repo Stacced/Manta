@@ -64,7 +64,7 @@ const Heading = styled.h1`
 // Component
 function Header({ t, invoice, profile, configs }) {
   const { tax, recipient } = invoice;
-  const { language, accentColor, customAccentColor  } = configs;
+  const { language, accentColor, customAccentColor } = configs;
   return (
     <InvoiceHeader>
       <LeftColumn>
@@ -74,13 +74,14 @@ function Header({ t, invoice, profile, configs }) {
           <p>{profile.address}</p>
           <p>{profile.email}</p>
           <p>{profile.phone}</p>
-          { tax && <p>Tax ID: { tax.tin }</p> }
+          { tax && <p>{t('preview:common:taxId', { lng: language })}: { tax.tin }</p> }
         </Company>
 
         {configs.showRecipient && (
           <Recipient>
             <h4>{t('preview:common:billedTo', { lng: language })}</h4>
             <p>{recipient.company}</p>
+            <p>{recipient.address}</p>
             <p>{recipient.fullname}</p>
             <p>{recipient.email}</p>
             <p>{recipient.phone}</p>

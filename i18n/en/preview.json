@@ -26,6 +26,7 @@
     }
   },
   "common": {
+    "taxId": "Tax ID",
     "billedTo": "Billed To",
     "chooseInvoiceToPreview": "Please choose an Invoice to preview",
     "created": "Created",

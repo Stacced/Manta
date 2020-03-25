@@ -64,6 +64,7 @@
       "reverse": "Umkehr der Steuerschuld"
     },
     "note": "Notiz",
-    "currency": "Währung"
+    "currency": "Währung",
+    "invoiceID": "Rechnungsnummer"
   }
 }

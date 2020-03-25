@@ -25,6 +25,7 @@
     }
   },
   "common": {
+    "taxId": "USt-ID",
     "billedTo": "Rechnungsempfänger",
     "chooseInvoiceToPreview": "Zur Vorschau bitte eine Rechnung auswählen",
     "created": "Erstellt",

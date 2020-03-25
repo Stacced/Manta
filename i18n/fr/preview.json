@@ -25,6 +25,7 @@
     }
   },
   "common": {
+    "taxId": "N° de TVA",
     "billedTo": "Facturé à",
     "chooseInvoiceToPreview": "Veuillez choisir une facture à visualiser",
     "created": "Créé",
