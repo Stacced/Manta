@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 // React Dates
+import "react-dates/initialize";
 import { SingleDatePicker } from 'react-dates';
 
 // Styles
@@ -40,8 +41,10 @@ export class DueDatePicker extends PureComponent {
   render() {
     const { t, selectedDate } = this.props;
     const dueDate = selectedDate === null ? null : moment(selectedDate);
+    // CSS link: definitely not the best workaround, but it works. It's 2:09am, I spent half the day on this. FML.
     return (
       <Container>
+        <link rel="stylesheet" href="../node_modules/react-dates/lib/css/_datepicker.css"/>
         <SingleDatePicker
           id="invoice-duedate"
           placeholder={t('form:fields:dueDate:placeHolder')}
