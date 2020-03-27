@@ -1,14 +1,20 @@
 {
   "name": "manta",
-  "homepage": "https://manta.life",
+  "homepage": "https://github.com/Stacced/Manta",
   "productName": "Manta",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "license": "GPL-3.0",
   "description": "Flexible invoicing desktop app with beautiful & customizable templates",
   "author": {
     "name": "Hung Q. Le",
     "email": "lequochung@me.com"
   },
+  "contributors": [
+    {
+      "name": "Stacked",
+      "url": "https://github.com/Stacced"
+    }
+  ],
   "main": "app.js",
   "scripts": {
     "start": "electron .",

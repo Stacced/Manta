@@ -3,7 +3,7 @@ copyright: Hung Q. Le
 productName: Manta
 publish:
   - provider: github
-    owner: hql287
+    owner: Stacced
     repo: Manta
 directories:
   output: dist/

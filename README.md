@@ -4,21 +4,14 @@
 
 <h2>
   Manta
-  <a href="https://travis-ci.org/hql287/Manta">
-    <img src="https://travis-ci.org/hql287/Manta.svg?branch=dev" alt="Build Status">
-  </a>
-  <a href="https://github.com/hql287/Manta/releases/tag/v1.1.4">
-    <img src="https://img.shields.io/badge/version-1.1.4-green.svg" alt="v1.1.4">
-  </a>
-  <a title="Crowdin" target="_blank" href="https://crowdin.com/project/manta">
-    <img src="https://d322cqt584bo4o.cloudfront.net/manta/localized.svg">
-  </a>
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg">
   </a>
 </h2>
 
 A desktop application for creating invoices with beautiful and customizable templates.
+
+Upgraded and modified by Stacked. Now at version 2.0.0
 
 <a href="#screenshots">Screenshots</a> •
 <a href="#features">Features</a> •
@@ -78,14 +71,6 @@ The following languages are currently being translated, if you would like to Man
 * 📊 Export PDF for print or email.
 * 🔒Complete Privacy. You financial data stays where it belongs.
 * 💯 Totally Free.
-
-### Downloads
-
-macOS | Windows | Linux
------------------| ---| ---|
-<a href='https://github.com/hql287/Manta/releases/download/v1.1.4/Manta-1.1.4.dmg'>Download v1.1.4</a> | <a href='https://github.com/hql287/Manta/releases/download/v1.1.4/Manta.Setup.1.1.4.exe'>Download v1.1.4</a> | <a href='https://github.com/hql287/Manta/releases/download/v1.1.4/Manta-1.1.4-x86_64.AppImage'>Download v1.1.4</a> |
-
-[More Download Options](https://github.com/hql287/Manta/releases)
 
 #### Supported Platforms
 Following platforms are supported by Electron:
